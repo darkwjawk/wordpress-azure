@@ -105,7 +105,11 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+//define('WP_DEBUG', false);
+ini_set( 'log_errors', 1 );
+ini_set( 'error_log', WP_CONTENT_DIR . '/error_messages.log' ); //任意の名称を設定できます
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_LOG', true );
 
 /* That's all, stop editing! Happy blogging. */
 
